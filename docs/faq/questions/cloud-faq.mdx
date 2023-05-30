@@ -1,13 +1,19 @@
 ---
 title: Cypress Cloud
 hide_table_of_contents: true
+sidebar_position: 30
 ---
+
+import TOCInline from '@theme/TOCInline'
+
+<TOCInline toc={toc} />
 
 ## <Icon name="angle-right" /> What is Cypress Cloud?
 
 <DocsImage
-  src="/img/dashboard/dashboard-runs-list.png"
+  src="/img/guides/cloud/runs/run-details-page.png"
   alt="Cloud Screenshot"
+  width="80%"
 />
 
 [Cypress Cloud](https://on.cypress.io/cloud) gives you access to tests you've
@@ -32,7 +38,7 @@ Please see our [Pricing Page](https://www.cypress.io/pricing) for more details.
 ## <Icon name="angle-right" /> What counts as a test result?
 
 Which [pricing tier](https://www.cypress.io/pricing) is best for you depends on
-the number of test you record each month in your organization.
+the number of tests you record each month in your organization.
 
 Tests are recorded when [cypress run](/guides/guides/command-line#cypress-run)
 is called with the `--record` flag while supplying the record `--key`. This
@@ -54,12 +60,28 @@ Cloud.
 A [user](/guides/cloud/users) is anyone with a login to Cypress Cloud who has
 been invited to see and review the test results of your organization.
 
+## <Icon name="angle-right" /> What if I can't access my Cypress Cloud account?
+
+1. If you haven't signed up, see the
+   [Sign Up with an Invitation](/guides/cloud/users#Sign-Up-with-an-Invitation)
+   instructions.
+
+2. Try resetting your password. If you never received the email, try the
+   following:
+
+   - Try signing in with Google or GitHub
+   - Check the trash and spam folder
+   - Verify it's the correct email address
+
+**If the troubleshooting tips above did not resolve the issue or involves SSO,
+reach out to [support](mailto:support@cypress.io).**
+
 ## <Icon name="angle-right" /> What is the difference between public and private projects?
 
 **A public project** means that anyone can see the recorded runs for it. It's
-similar to how public projects on Github, Travis, or Circle are handled. Anyone
-who knows your `projectId` will be able to see the recorded runs, screenshots,
-and videos for public projects.
+similar to how public projects on Github, Travis, or CircleCI are handled.
+Anyone who knows your `projectId` will be able to see the recorded runs,
+screenshots, and videos for public projects.
 
 **A private project** means that only [users](/guides/cloud/users) you
 explicitly invite to your [organization](/guides/cloud/organizations) can see
@@ -72,8 +94,8 @@ Cypress is **complementary** to your
 [CI provider](/guides/continuous-integration/introduction), and plays a
 completely different role.
 
-It doesn't replace or change anything related to CI. You will run Cypress tests
-in your CI provider.
+It doesn't replace or change anything related to CI. You will still run Cypress
+tests in your CI provider.
 
 The difference between [Cypress Cloud](/guides/cloud/introduction) and your CI
 provider is that your CI provider has no idea what is going on inside of the
@@ -160,8 +182,8 @@ Find a variable across your containers that is the same for all of them, but is
 different from run to run. For example it could be an environment variable
 called `CI_RUN_ID` that you set when creating the containers to run Cypress. You
 can pass this variable via CLI argument
-[`--ci-build-id`](/guides/guides/command-line#cypress-run-ci-build-id-lt-id-gt)when
-starting Cypress in each container:
+[`--ci-build-id`](/guides/guides/command-line#cypress-run-ci-build-id-lt-id-gt)
+when starting Cypress in each container:
 
 ```shell
 cypress run --record --parallel --ci-build-id $CI_RUN_ID
@@ -195,7 +217,7 @@ in your account will be permanently deleted.
 Downgrading your account will **not** result in loss of access to Cypress Cloud.
 
 However, it will make your Cypress Cloud account subject to the limitations of
-your new plan. For example, downgrading to the _Seed_ plan will limit data
+your new plan. For example, downgrading to the _Free_ plan will limit data
 retention to 30 days and test results to 500 per billing period.
 
 ## <Icon name="angle-right" /> What happens once I reach the test results limit?
@@ -215,13 +237,7 @@ by:
 4. Review your organization's usage
 5. Scroll down and select **Upgrade** under your plan of choice
 
-## <Icon name="angle-right" /> I'm working at a restrictive VPN. Which subdomains do I have to allow on
-
-my VPN for Cypress Cloud to work properly?
-
-To send the data and results of your tests to
-[Cypress Cloud](https://on.cypress.io/cloud-introduction), Cypress needs free
-access to some URLs.
+## <Icon name="angle-right" /> I'm working with a restrictive VPN. Which subdomains do I have to allow on my VPN for Cypress Cloud to work properly?
 
 If you are running the tests from within a restrictive VPN you will need to
 allow some URLs so that Cypress can have effective communication with Cypress
@@ -237,3 +253,10 @@ Cloud.
 - `https://docs.cypress.io` - **Cypress documentation**
 - `https://download.cypress.io` - **CDN download of Cypress binary**
 - `https://on.cypress.io` - **URL shortener for link redirects**
+
+**If you are using GitHub Enterprise or GitLab for Enterprise (Self-managed),
+you may also need to add both the following to the version control IP allow
+list:**
+
+- `3.211.102.119` - **Dedicated IP**
+- `18.213.72.78` - **Dedicated IP**

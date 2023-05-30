@@ -7,7 +7,7 @@
         {
           "name": "Webpack",
           "description": "Watches and bundles your spec files via webpack.",
-          "link": "https://github.com/cypress-io/cypress/tree/master/npm/webpack-preprocessor",
+          "link": "https://github.com/cypress-io/cypress/tree/develop/npm/webpack-preprocessor",
           "keywords": ["webpack"],
           "badge": "official"
         },
@@ -116,7 +116,7 @@
         },
         {
           "name": "Cypress Github Actions",
-          "description": "GitHub Action for running Cypress end-to-end and component tests. Includes NPM installation, custom caching and lots of configuration options.",
+          "description": "GitHub Action for running Cypress end-to-end and component tests. Includes npm, pnpm and Yarn installation, custom caching and lots of configuration options.",
           "link": "https://github.com/cypress-io/github-action",
           "keywords": ["continuous-integration", "github-actions"],
           "badge": "official"
@@ -159,7 +159,7 @@
         {
           "name": "TypeScript",
           "description": "Official TypeScript definitions for the Cypress API.",
-          "link": "https://github.com/cypress-io/cypress/tree/master/cli/types",
+          "link": "https://github.com/cypress-io/cypress/tree/develop/cli/types",
           "keywords": ["typescript"],
           "badge": "official"
         },
@@ -377,6 +377,13 @@
           "description": "A Cypress plugin which automatically adds and enables IntelliSense for custom commands",
           "link": "https://github.com/ExpediaGroup/cypress-codegen",
           "keywords": ["commands", "development", "codegen"],
+          "badge": "community"
+        },
+        {
+          "name": "cypress-backoff",
+          "description": "A Cypress plugin to apply different timeout strategies to retried tests",
+          "link": "https://github.com/joostvanwollingen/cypress-backoff",
+          "keywords": ["retries", "backoff"],
           "badge": "community"
         }
       ]
@@ -710,6 +717,13 @@
           "link": "https://github.com/MohamadKh75/cypress-plugin-multiple-click",
           "keywords": ["testing", "commands", "click"],
           "badge": "community"
+        },
+        {
+          "name": "@datashard/snapshot",
+          "description": "Adds Snapshot command. Adds value / object / DOM element snapshot testing support to Cypress test runner",
+          "link": "https://github.com/datashard/snapshot",
+          "keywords": ["snapshot", "comparison", "commands"],
+          "badge": "community"
         }
       ]
     },
@@ -805,7 +819,7 @@
         {
           "name": "Cypress Schematic",
           "description": "Adds Cypress to your Angular project via the Angular CLI. Adopted by Cypress; originally released as <a target=\"_blank\" href=\"https://www.npmjs.com/package/@briebug/cypress-schematic\">@briebug/cypress-schematic</a>.",
-          "link": "https://github.com/cypress-io/cypress/tree/master/npm/cypress-schematic",
+          "link": "https://github.com/cypress-io/cypress/tree/develop/npm/cypress-schematic",
           "keywords": ["angular", "cli"],
           "badge": "official"
         },
@@ -902,35 +916,35 @@
         {
           "name": "Cypress Angular",
           "description": "Test Angular components using Cypress Test Runner. This package is bundled with the cypress package and does not need to be installed separately, unless a specific version is desired. See the <a target=\"_blank\" href=\"/guides/component-testing/angular/overview\">Angular Component Testing Docs</a> for mounting Angular components.",
-          "link": "https://github.com/cypress-io/cypress/tree/master/npm/angular",
+          "link": "https://github.com/cypress-io/cypress/tree/develop/npm/angular",
           "keywords": ["component", "angular"],
           "badge": "official"
         },
         {
           "name": "Cypress React",
           "description": "Test React components using Cypress Test Runner. This package is bundled with the cypress package and does not need to be installed separately, unless a specific version is desired. See the <a target=\"_blank\" href=\"/guides/component-testing/react/overview\">React Component Testing Docs</a> for mounting React components.",
-          "link": "https://github.com/cypress-io/cypress/tree/master/npm/react",
+          "link": "https://github.com/cypress-io/cypress/tree/develop/npm/react",
           "keywords": ["component", "react"],
           "badge": "official"
         },
         {
           "name": "Cypress Svelte",
           "description": "Test Svelte components using Cypress Test Runner. This package is bundled with the cypress package and should not need to be installed separately. See the <a target=\"_blank\" href=\"/guides/component-testing/svelte/overview\">Svelte Component Testing Docs</a> for mounting Svelte components.",
-          "link": "https://github.com/cypress-io/cypress/tree/master/npm/svelte",
+          "link": "https://github.com/cypress-io/cypress/tree/develop/npm/svelte",
           "keywords": ["component", "svelte"],
           "badge": "official"
         },
         {
           "name": "Cypress Vue",
           "description": "Test Vue 3 components using Cypress Test Runner. This package is bundled with the cypress package and should not need to be installed separately. See the <a target=\"_blank\" href=\"/guides/component-testing/vue/overview\">Vue Component Testing Docs</a> for mounting Vue components.",
-          "link": "https://github.com/cypress-io/cypress/tree/master/npm/vue",
+          "link": "https://github.com/cypress-io/cypress/tree/develop/npm/vue",
           "keywords": ["component", "vue", "vue.js"],
           "badge": "official"
         },
         {
           "name": "Cypress Vue2",
           "description": "Test Vue 2 components using Cypress Test Runner. This package is bundled with the cypress package and should not need to be installed separately. See the <a target=\"_blank\" href=\"/guides/component-testing/vue/overview\">Vue Component Testing Docs</a> for mounting Vue components.",
-          "link": "https://github.com/cypress-io/cypress/tree/master/npm/vue2",
+          "link": "https://github.com/cypress-io/cypress/tree/develop/npm/vue2",
           "keywords": ["component", "vue", "vue.js"],
           "badge": "official"
         },
@@ -968,6 +982,20 @@
           "link": "https://github.com/bahmutov/cypress-svelte-unit-test",
           "keywords": ["component", "svelte"],
           "badge": "experimental"
+        },
+        {
+          "name": "cypress-ct-custom-devserver",
+          "description": "Simplified API for creating custom dev servers for Cypress.",
+          "link": "https://github.com/fochlac/cypress-ct-custom-devserver",
+          "keywords": ["component", "buildtool", "devserver"],
+          "badge": "community"
+        },
+        {
+          "name": "cypress-devserver-esbuild",
+          "description": "Build Cypress Component Tests using esbuild.",
+          "link": "https://github.com/fochlac/cypress-devserver-esbuild",
+          "keywords": ["component", "esbuild", "devserver"],
+          "badge": "community"
         }
       ]
     },
